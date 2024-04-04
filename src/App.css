@@ -52,3 +52,93 @@ nav.navbar .navbar-nav .nav-link.navbar-link-projects {
   margin-right: 10px;
 }
 
+
+/* Banner CSS */
+.banner {
+  margin-top: 0;
+  padding: 200px 0 100px 0;
+  background-image: url('./assets/img/banner.png');
+  background-position: top center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+}
+
+.banner .align-items-center img{
+  height: 600px;
+  animation: updown 1s linear infinite;
+  margin-top: 75px;
+}
+@keyframes updown {
+  0%, 30% { /* Start and quickly jump to the highest point */
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); /* This makes the jump sudden */
+  }
+  40% { /* Peak of the jump */
+    transform: translateY(-70px); /* Adjust based on how high you want the jump */
+    animation-timing-function: ease-out; /* Starts fast, then slows down, simulating gravity on the way down */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.banner .tagline {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: pixelfont;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.banner p {
+  font-size: 30px;
+  font-family: 'Arial';
+  color: black;
+}
+
+.banner h1 {
+  font-family: dogica;
+  color: black;
+  font-size: 40px;
+}
+
+@font-face {
+  font-family: pixelfont;
+  src: url(./assets/fonts/Pixeled.ttf);
+}
+
+@font-face {
+  font-family: centra-bold;
+  src: url(./assets/fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: dogica-pixel;
+  src: url(./assets/fonts/dogicapixel.ttf);
+}
+
+@font-face {
+  font-family: dogica;
+  src: url(./assets/fonts/dogicabold.ttf);
+}
+
+.banner p {
+  text-indent: 50px;
+  font-family: dogica-pixel;
+  font-size: 25px;
+}
+
+.banner button {
+  background-image: url('./assets/img/block-empty.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+}
+
+.music-icon {
+  color: #994e00;
+  font-size: 30px;
+}
