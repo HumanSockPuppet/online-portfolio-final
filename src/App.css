@@ -1,3 +1,25 @@
+/* Fonts */
+@font-face {
+  font-family: pixelfont;
+  src: url(./assets/fonts/Pixeled.ttf);
+}
+
+@font-face {
+  font-family: centra-bold;
+  src: url(./assets/fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: dogica-pixel;
+  src: url(./assets/fonts/dogicapixel.ttf);
+}
+
+@font-face {
+  font-family: dogica;
+  src: url(./assets/fonts/dogicabold.ttf);
+}
+
+
 /* Navbar CSS */
 nav.navbar {
   padding: 18px 0;
@@ -102,26 +124,6 @@ nav.navbar .navbar-nav .nav-link.navbar-link-projects {
   font-family: dogica;
   color: black;
   font-size: 40px;
-}
-
-@font-face {
-  font-family: pixelfont;
-  src: url(./assets/fonts/Pixeled.ttf);
-}
-
-@font-face {
-  font-family: centra-bold;
-  src: url(./assets/fonts/CentraNo2-Bold.ttf);
-}
-
-@font-face {
-  font-family: dogica-pixel;
-  src: url(./assets/fonts/dogicapixel.ttf);
-}
-
-@font-face {
-  font-family: dogica;
-  src: url(./assets/fonts/dogicabold.ttf);
 }
 
 .banner p {

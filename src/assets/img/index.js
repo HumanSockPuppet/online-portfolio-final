@@ -1,0 +1,1 @@
+export const yoshi = require('./yoshi 3.png');
