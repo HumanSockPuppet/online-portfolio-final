@@ -22,16 +22,15 @@ export const Banner = () => {
   
   return (
     <section className="banner" id="home">
-      <Container>
+      <Container className="container-1">
         <span className="tagline">WELCOME TO MY PORTFOLIO</span>
       </Container>
-      <Container classname="container">
-        <Row className="align-items-center">
-          <Col cs={12} md={6} xl={6}>
+      <Container className="container-2">
+        <Row>
+          <Col className="yoshi">
             <img src={yoshi} alt="Header Img" />
           </Col>
-
-          <Col cs={12} md={6} xl={6}>
+          <Col className="column-brix">
             <h1>It&apos;s-a-me, BRIX! </h1>
             <p>
             Welcome to my online portfolio, a neatly organized showcase of my projects. Here, you&apos;ll also find details about the technologies I specialize in. If you&apos;re interested in my skills, please don&apos;t hesitate to reach out via email! 
