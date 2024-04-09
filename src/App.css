@@ -1,17 +1,66 @@
+/* Fonts */
+@font-face {
+  font-family: pixelfont;
+  src: url(./assets/fonts/Pixeled.ttf);
+}
+
+@font-face {
+  font-family: centra-bold;
+  src: url(./assets/fonts/CentraNo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: dogica-pixel;
+  src: url(./assets/fonts/dogicapixel.ttf);
+}
+
+@font-face {
+  font-family: dogica;
+  src: url(./assets/fonts/dogicabold.ttf);
+}
+
+
 /* Navbar CSS */
 nav.navbar {
-  padding: 18px 0;
+  display: flex;
+  padding: 5px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
   background-image: url("./assets/img/header-image-2.png");
+} 
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.container .nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-toggle {
+  align-self: center;
+}
+
+.custom-toggle:focus {
+  outline: 1px solid white !important;
+  color: white;
 }
 
 .logo-img {
-  max-width: 100px;
   height: auto;
+  border: 3px solid yellow;
 }
 
 span.navbar-text {
@@ -21,25 +70,20 @@ span.navbar-text {
 
 /* Add this to your stylesheet, e.g., App.css */
 nav.navbar .navbar-nav .nav-link {  
-  padding: 20px; /* Adjust padding */
-  width: 200px; /* Set width */
-  height: 90px; /* Set height */
-  background-size: contain; /* Show the whole image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center; /* Center the background image within the link */
-  color: black; /* Change the text color if needed for better visibility */
-  display: block; /* Make the Nav.Link occupy its own space for the background to show properly */
+  padding: 20px; 
+  width: 170px; 
+  height: auto;
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  color: black; 
+  display: flex;
+  background-image: url('./assets/img/cloud2.png');
+  justify-content: center;
+  align-items: center;
+  font-family: "dogica";
   margin-right: 20px;
-}
-
-nav.navbar .navbar-nav .nav-link.navbar-link-home {
-  background-image: url('./assets/img/cloud-home.png'); 
-}
-nav.navbar .navbar-nav .nav-link.navbar-link-skills {
-  background-image: url('./assets/img/cloud-skills.png'); 
-}
-nav.navbar .navbar-nav .nav-link.navbar-link-projects {
-  background-image: url('./assets/img/cloud-projects.png'); 
+  min-height: 70px;
 }
 
 .social-icon {
@@ -52,3 +96,333 @@ nav.navbar .navbar-nav .nav-link.navbar-link-projects {
   margin-right: 10px;
 }
 
+
+/* Banner CSS */
+
+.banner {
+  margin-top: 0;
+  padding: 100px 0 100px 0;
+  background-image: url('./assets/img/banner.png');
+  background-position: top center;
+  background-size: 540%;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.container-1, .container-2{
+  border: 1px solid red;
+}
+
+.container-2 {
+  display: flex;
+}
+
+.container-2 .yoshi{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  border: 5px solid green;
+}
+
+.banner .yoshi img{  
+  animation: updown 1s linear infinite;
+  max-width: 100%; /* Ensures the image is never wider than its container */
+  height: 150px; 
+  border: 5px solid yellow;
+}
+@keyframes updown {
+  0%, 30% { /* Start and quickly jump to the highest point */
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); /* This makes the jump sudden */
+  }
+  40% { /* Peak of the jump */
+    transform: translateY(-70px); /* Adjust based on how high you want the jump */
+    animation-timing-function: ease-out; /* Starts fast, then slows down, simulating gravity on the way down */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.banner ,.container-1{
+  justify-content: center; 
+}
+
+.banner .tagline {
+  display: flex;
+  justify-content: center;  
+  font-family: pixelfont;
+  color: white; 
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px  2px 0 #000,
+    2px  2px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0  2px 0 #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner p {
+  font-size: 30px;
+  font-family: 'Arial';
+  color: black;
+}
+
+.banner h1 {
+  font-size: 15px;
+  font-family: dogica;
+  color: black;  
+  text-align: center;
+}
+
+.banner p {
+  text-indent: 50px;
+  font-family: dogica-pixel;
+  font-size: 17px;
+}
+
+.banner button {
+  background-image: url('./assets/img/block-empty.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+}
+
+.music-icon {
+  color: #994e00;
+  font-size: 15px;
+}
+
+
+/* Mobile styles */
+@media only screen and (min-width: 320px) {  
+  .logo-img {
+    width: 80px; 
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link-home,
+  nav.navbar .navbar-nav .nav-link.navbar-link-skills,
+  nav.navbar .navbar-nav .nav-link.navbar-link-projects {
+    height: auto; /* Adjust based on your content, auto implies natural height */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+    padding: 10px; 
+    margin-top: 10px;
+  }
+
+  .banner .tagline{
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .banner .column-brix p {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 375px) { 
+  .banner {
+    background-size: 400%;
+  }
+
+  .banner .tagline{
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .banner .column-brix p {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 425px) { 
+  .banner {
+    background-size: 380%;
+  }
+
+  .banner .tagline{
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 27px;
+    padding: 10px;
+  }
+
+  .banner .column-brix p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) { 
+  
+
+  .banner {
+    background-size: 200%;
+  }
+
+  .banner .tagline{
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .banner .column-brix p {
+    font-size: 25px;
+  }
+
+  .banner .yoshi img{  
+    height: 200px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) { 
+
+  .banner {
+    background-size: 120%;
+    background-position: 0% -20px;
+  }
+
+  .banner .tagline{
+    font-size: 35px;
+    padding: 20px;
+  }
+
+  .banner .yoshi {
+    flex: 1;
+  }
+
+  .banner .column-brix {
+    flex: 2;
+  }
+
+  .banner .column-brix h1{
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .banner .column-brix p {
+    font-size: 23px;
+  }
+
+  .banner .yoshi img{  
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) { 
+  nav.navbar .navbar-nav .nav-link.navbar-link-home,
+  nav.navbar .navbar-nav .nav-link.navbar-link-skills,
+  nav.navbar .navbar-nav .nav-link.navbar-link-projects {    
+    width: 170px;
+  }
+
+  .banner {
+    background-size: 100%;
+    background-position: 0% -170px;
+  }
+
+  .banner .tagline{
+    font-size: 35px;
+    padding: 20px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .banner .column-brix p {
+    font-size: 23px;
+  }
+
+  .banner .yoshi img{  
+    height: 325px;
+  }
+}
+
+@media only screen and (min-width: 1920px) { 
+  .banner {
+    background-size: 100%;
+    background-position: 0% -250px;
+  }
+
+  .banner .container-2{
+    width: 1900px;
+    height: 500px;
+  }
+  
+
+  .banner .tagline{
+    font-size: 45px;
+    padding: 20px;
+  }
+
+  .banner .column-brix h1{
+    font-size: 40px;
+    padding: 15px;
+  }
+
+  .banner .column-brix p {
+    font-size: 30px;
+  }
+
+  .banner .yoshi img{  
+    height: 450px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .container-2 .row {
+    flex-direction: column;
+  }
+
+  .yoshi {
+    order: 2; /* Moves the Yoshi column to the bottom */
+  }
+
+  .column-brix {
+    order: 1; /* Moves the Brix column to the top */
+  }
+}
+
+
+/* Tablet styles */
+/* @media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .banner .tagline{
+    font-size: 35px;
+    padding: 15px;
+  }
+} */
+
+/* Desktop styles */
+/* @media only screen and (min-width: 1025px) {
+  .banner .tagline{
+    font-size: 40px;
+    padding: 20px;
+  }
+} */
