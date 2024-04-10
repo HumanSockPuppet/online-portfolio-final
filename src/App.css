@@ -19,6 +19,17 @@
   src: url(./assets/fonts/dogicabold.ttf);
 }
 
+.card1 {
+  background: none; /* Ensure no background color is applied */
+}
+
+/* App CSS 
+.App{
+  background-image: url('./assets/img/banner.png');
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
 
 /* Navbar CSS */
 nav.navbar {
@@ -60,7 +71,6 @@ nav.navbar {
 
 .logo-img {
   height: auto;
-  border: 3px solid yellow;
 }
 
 span.navbar-text {
@@ -101,18 +111,14 @@ nav.navbar .navbar-nav .nav-link {
 
 .banner {
   margin-top: 0;
-  padding: 100px 0 100px 0;
+  padding: 90px 0 60px 0;
   background-image: url('./assets/img/banner.png');
   background-position: top center;
-  background-size: 540%;
+  background-size: 535%;
   background-repeat: no-repeat;
   margin-top: 10px;
   justify-content: center;
-}
-
-.container-1, .container-2{
-  border: 1px solid red;
-}
+} 
 
 .container-2 {
   display: flex;
@@ -123,14 +129,12 @@ nav.navbar .navbar-nav .nav-link {
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  border: 5px solid green;
 }
 
 .banner .yoshi img{  
   animation: updown 1s linear infinite;
   max-width: 100%; /* Ensures the image is never wider than its container */
   height: 150px; 
-  border: 5px solid yellow;
 }
 @keyframes updown {
   0%, 30% { /* Start and quickly jump to the highest point */
@@ -201,6 +205,50 @@ nav.navbar .navbar-nav .nav-link {
 }
 
 
+/* Skills CSS  */
+.skills {
+  margin-top: 0;
+  padding: 20px 0 20px 0;
+  background-image: url('./assets/img/banner.png');
+  background-position: 15% 0;
+  background-size: 375%;
+  background-repeat: no-repeat;
+  justify-content: center;
+} 
+
+.skills .skills-container{  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;  
+}
+
+.skills h1 {
+  font-size: 25px;
+  font-family: dogica;
+  color: black;  
+  text-align: center;
+}
+
+.skills-container > div {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  text-align: center; /* Center text */
+  margin: 10px; /* Adjust as necessary */
+  flex-basis: 100%; /* Full width on small screens */
+}
+
+.skills-container img {
+  height: 50px; /* Example height */
+  width: auto; /* Example width */
+}
+
+.skills-container h2 {
+  font-size: 20px;
+}
+
 /* Mobile styles */
 @media only screen and (min-width: 320px) {  
   .logo-img {
@@ -230,11 +278,16 @@ nav.navbar .navbar-nav .nav-link {
   .banner .column-brix p {
     font-size: 17px;
   }
+
+  .skills-container > div {
+    flex-basis: calc(50% - 20px); /* Two items per row, adjust margin accordingly */
+  }
 }
 
 @media only screen and (min-width: 375px) { 
   .banner {
-    background-size: 400%;
+    background-size: 395%;
+    padding: 90px 0 55px 0;
   }
 
   .banner .tagline{
@@ -250,11 +303,16 @@ nav.navbar .navbar-nav .nav-link {
   .banner .column-brix p {
     font-size: 17px;
   }
+
+  .skills {
+    background-size: 320%;
+  }
+
 }
 
 @media only screen and (min-width: 425px) { 
   .banner {
-    background-size: 380%;
+    background-size: 375%;
   }
 
   .banner .tagline{
@@ -270,13 +328,17 @@ nav.navbar .navbar-nav .nav-link {
   .banner .column-brix p {
     font-size: 20px;
   }
+
+  .skills {
+    background-size: 280%;
+  }
 }
 
 @media only screen and (min-width: 768px) { 
-  
 
   .banner {
-    background-size: 200%;
+    background-size: 195%;
+    padding: 90px 0 50px 0;
   }
 
   .banner .tagline{
@@ -296,14 +358,26 @@ nav.navbar .navbar-nav .nav-link {
   .banner .yoshi img{  
     height: 200px;
   }
+
+  .skills {
+    background-size: 110%;
+  }
+
+  .skills-container > div {
+    flex-basis: calc(25% - 20px); /* Three items per row */
+  }
+
+  .skills-container h2 {
+    font-size: 25px;
+  }
 }
 
 
 @media only screen and (min-width: 1024px) { 
 
   .banner {
-    background-size: 120%;
-    background-position: 0% -20px;
+    background-size: 108%;
+    padding: 90px 0 39px 0;
   }
 
   .banner .tagline{
@@ -331,6 +405,23 @@ nav.navbar .navbar-nav .nav-link {
   .banner .yoshi img{  
     height: 300px;
   }
+
+  .skills {
+    background-size: 100%;    
+    background-position: 0% -130px;
+  }
+
+  .skills-container > div {
+    flex-basis: calc(20% - 20px); /* Three items per row */
+  }
+
+  .skills-container img {
+    height: 80px;
+  }
+
+  .skills-container h2 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (min-width: 1440px) { 
@@ -342,7 +433,8 @@ nav.navbar .navbar-nav .nav-link {
 
   .banner {
     background-size: 100%;
-    background-position: 0% -170px;
+    background-position: 0% -194px;
+    padding: 90px 0 54px 0;
   }
 
   .banner .tagline{
@@ -361,6 +453,10 @@ nav.navbar .navbar-nav .nav-link {
 
   .banner .yoshi img{  
     height: 325px;
+  }
+
+  .skills-container img {
+    height: 100px;
   }
 }
 
@@ -393,6 +489,10 @@ nav.navbar .navbar-nav .nav-link {
   .banner .yoshi img{  
     height: 450px;
   }
+
+  .skills-container img {
+    height: 120px;
+  }
 }
 
 
@@ -411,18 +511,3 @@ nav.navbar .navbar-nav .nav-link {
 }
 
 
-/* Tablet styles */
-/* @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .banner .tagline{
-    font-size: 35px;
-    padding: 15px;
-  }
-} */
-
-/* Desktop styles */
-/* @media only screen and (min-width: 1025px) {
-  .banner .tagline{
-    font-size: 40px;
-    padding: 20px;
-  }
-} */
